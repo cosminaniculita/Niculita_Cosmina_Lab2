@@ -1,0 +1,83 @@
+﻿<Window x:Class="Niculita_Cosmina_Lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Niculita_Cosmina_Lab2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="frmMain" Background="#FF7FAAF4" Margin="-342,-60,-432,-102">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="241*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="91*"/>
+
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblTitle" Content="Doughnuts-Bake &amp; Sale" HorizontalAlignment="Left" Margin="415,40,0,0" VerticalAlignment="Top" Width="403" FontSize="24" FontWeight="Bold" Grid.Column="3" Grid.ColumnSpan="2"/>
+        <GroupBox x:Name="gbRaised" Header="Raised" Margin="81,94,931,271" RenderTransformOrigin="0.5,0.5" Grid.Column="3" FontWeight="Bold" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <GroupBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.328"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </GroupBox.RenderTransform>
+            <Canvas Margin="-8,-18,8,0">
+                <TextBox x:Name="txtGlazedRaised" Canvas.Left="146" Canvas.Top="41" Text="0" TextWrapping="Wrap" Width="85" Height="42" FontWeight="Normal" IsReadOnly="True"/>
+                <Label x:Name="lblSugarRaised" Content="Sugar" Canvas.Left="14" Canvas.Top="141" Height="45" Width="98" FontSize="24" FontWeight="Normal" FontFamily="Bahnschrift"/>
+                <TextBox x:Name="txtSugarraised" Canvas.Left="143" Canvas.Top="144" Text="0" TextWrapping="Wrap" Width="85" Height="42" FontWeight="Normal" IsReadOnly="True"/>
+            </Canvas>
+        </GroupBox>
+        <GroupBox x:Name="gbFilled" Grid.Column="3" Header="Filled" Margin="577,87,315,265" FontWeight="Bold" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <Canvas Margin="0,0,-2,13">
+                <Label x:Name="lblLemonFilled1" Content="Lemon" Canvas.Left="27" Canvas.Top="15" Height="48" Width="97" FontWeight="Normal" FontFamily="Bahnschrift" RenderTransformOrigin="0.455,-0.203"/>
+                <TextBox x:Name="txtLemonFilled1" Canvas.Left="165" Canvas.Top="24" Text="0" TextWrapping="Wrap" Width="112" FontWeight="Normal" FontFamily="Bahnschrift" IsReadOnlyCaretVisible="True" RenderTransformOrigin="0.686,0.449"/>
+                <Label x:Name="lblChocolateFilled1" Content="Chocolate" Canvas.Left="10" Canvas.Top="79" FontWeight="Normal" FontFamily="Bahnschrift"/>
+                <Label x:Name="lblVanillaFilled1" Content="Vanilla" Canvas.Left="27" Canvas.Top="141" FontWeight="Normal" FontFamily="Bahnschrift" RenderTransformOrigin="-0.297,0.626"/>
+                <Canvas Height="250" Width="554" Canvas.Left="561" Canvas.Top="-7">
+                    <TextBox x:Name="txtChocolateFilled" Canvas.Left="-398" Canvas.Top="95" Text="0" TextWrapping="Wrap" Width="120" FontWeight="Normal" FontFamily="Bahnschrift" IsReadOnly="True"/>
+                    <TextBox x:Name="txtVanillaFilled" Canvas.Left="-398" Canvas.Top="158" Text="0" TextWrapping="Wrap" Width="120" FontWeight="Normal" FontFamily="Bahnschrift" IsReadOnly="True"/>
+                </Canvas>
+            </Canvas>
+        </GroupBox>
+        <Label x:Name="lblGlazedRaised" Content="Glazed" Grid.Column="3" HorizontalAlignment="Left" Margin="85,38,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.999,-5.153" Height="60" Width="151" FontSize="24" FontFamily="Bahnschrift" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <GroupBox x:Name="gbSales" Grid.Column="3" Header="Current Sale" Margin="10,222,312,10" FontWeight="Bold" FontSize="24" Grid.Row="1" Grid.ColumnSpan="2">
+            <Canvas Margin="0,0,0,-39">
+                <TextBox x:Name="txtQuantity" Canvas.Left="137" Canvas.Top="7" Text="0" TextWrapping="Wrap" Width="67" FontWeight="Normal" FontFamily="Bahnschrift" RenderTransformOrigin="0.561,1.104" Height="34"/>
+                <Label x:Name="lblType" Content="Type" Canvas.Left="228" Canvas.Top="7" FontWeight="Normal" FontFamily="Bahnschrift"/>
+                <Label x:Name="lblPrice" Content="Price" Canvas.Left="432" Canvas.Top="12" FontWeight="Normal" FontFamily="Bahnschrift"/>
+                <TextBox x:Name="txtPrice" Canvas.Left="520" Canvas.Top="10" Text="0" TextWrapping="Wrap" Width="81" FontWeight="Normal" FontFamily="Bahnschrift" RenderTransformOrigin="0.561,1.104" IsReadOnly="True" Height="34"/>
+                <ListBox x:Name="lstSale" Height="106" Width="748" Canvas.Left="27" Canvas.Top="51"/>
+                <Label x:Name="lblTotal" Content="Total" Canvas.Left="540" Canvas.Top="162" FontWeight="Bold" FontFamily="Bahnschrift"/>
+                <Button x:Name="btnAddToSale" Content="Add to sale" Canvas.Left="868" Canvas.Top="24" FontWeight="Normal" Width="143"/>
+                <Button x:Name="btnRemoveItem" Content="Revome item" Canvas.Left="868" Canvas.Top="68" FontWeight="Normal"/>
+                <Button x:Name="btnCheckOut" Content="Check out" Canvas.Left="967" Canvas.Top="145" Height="56"/>
+            </Canvas>
+        </GroupBox>
+        <Label x:Name="lblQuantity" Content="Quantity" Grid.Column="3" HorizontalAlignment="Left" Margin="39,258,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="24" RenderTransformOrigin="0.539,0.231" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cmbType" Grid.Column="3" HorizontalAlignment="Left" Margin="299,261,0,0" VerticalAlignment="Top" Width="123" Height="39" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtTotal" Grid.Column="3" HorizontalAlignment="Left" Margin="624,420,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" FontFamily="Bahnschrift" FontSize="24" IsReadOnly="True" Height="31" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="56" VerticalAlignment="Top"
+Width="227" Margin="0,26,0,0" Grid.ColumnSpan="5">
+            <MenuItem Header="File" FontFamily="Bahnschrift" FontSize="24">
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="Doughnuts" FontFamily="Bahnschrift" FontSize="24">
+                <MenuItem Header="Make"/>
+                <MenuItem Header="Raised"/>
+                <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
+                <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
+
+                <MenuItem Header="Filled"/>
+            </MenuItem>
+
+        </Menu>
+    </Grid>
+</Window>
